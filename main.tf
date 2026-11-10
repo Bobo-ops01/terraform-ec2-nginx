@@ -15,13 +15,18 @@ variable "my_ip" {
   type        = string
 }
 
+variable "public_key" {
+  description = "SSH public key"
+  type        = string
+}
+
 data "aws_ssm_parameter" "al2023" {
   name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
 }
 
 resource "aws_key_pair" "demo" {
   key_name   = "terraform-demo-key"
-  public_key = file("~/.ssh/terraform-demo.pub")
+  public_key = var.public_key
 }
 
 resource "aws_security_group" "web" {
