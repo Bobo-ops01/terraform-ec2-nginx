@@ -1,3 +1,5 @@
+[![Terraform checks](https://github.com/Bobo-ops01/terraform-ec2-nginx/actions/workflows/terraform.yml/badge.svg)](https://github.com/Bobo-ops01/terraform-ec2-nginx/actions/workflows/terraform.yml)
+
 # Terraform EC2 Nginx
 
 A Terraform project that launches a web server on AWS.
